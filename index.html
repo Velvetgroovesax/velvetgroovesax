@@ -9,9 +9,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Lora&family=Great+Vibes&display=swap" rel="stylesheet">
   <style>
     :root {
-      --fondo-principal: #2B0B11;      /* Borgoña oscuro */
-      --texto-principal: #F5EBDD;      /* Marfil suave para cuerpo */
-      --texto-dorado: #D4AF37;         /* Dorado para títulos/encabezado */
+      --fondo-principal: #2B0B11;
+      --texto-principal: #F5EBDD;
+      --texto-dorado: #D4AF37;
     }
 
     * { box-sizing: border-box; }
@@ -25,7 +25,6 @@
       line-height: 1.6;
     }
 
-    /* Encabezado con saxofón de fondo */
     header {
       position: relative;
       background-color: var(--fondo-principal);
@@ -35,7 +34,6 @@
       text-align: left;
     }
 
-    /* Saxo como sello de fondo, sutil */
     header::after {
       content: "";
       position: absolute;
@@ -43,16 +41,16 @@
       right: 0;
       bottom: 0;
       width: 45%;
-      background: url('logo_velvet_groove.png') no-repeat right center;
+      background: url('logo_saxofon_final.png') no-repeat right center;
       background-size: contain;
-      opacity: 0.18;              /* Ajusta si lo quieres más/menos visible */
+      opacity: 0.18;
       pointer-events: none;
     }
 
     header h1 {
       margin: 0 0 0.25rem 0;
       font-family: 'Great Vibes', cursive;
-      font-size: 3.25rem;         /* Título estiloso tipo pincelada */
+      font-size: 3.25rem;
       line-height: 1.1;
       letter-spacing: 0.5px;
       color: var(--texto-dorado);
@@ -80,6 +78,7 @@
       text-decoration: none;
       font-weight: 500;
     }
+
     nav a:hover { text-decoration: underline; }
 
     main {
