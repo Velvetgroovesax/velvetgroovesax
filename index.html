@@ -126,7 +126,96 @@
 
     a { color: var(--texto-principal); }
   </style>
-</head>
+
+    <style>
+    #sobre {
+        max-width: 800px;
+        margin: 80px auto;
+        line-height: 1.8;
+        font-size: 1.2em;
+        text-align: center;
+    }
+
+    .music-bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: 0;
+        pointer-events: none;
+    }
+
+    .note {
+        position: absolute;
+        font-size: 3em;
+        color: rgba(60, 13, 22, 0.18);
+        transform: rotate(0deg);
+        user-select: none;
+        transition: transform 0.1s linear;
+    }
+
+    /* Ajuste para móviles */
+    @media (max-width: 768px) {
+        .note {
+            font-size: 4em;
+            color: rgba(60, 13, 22, 0.25);
+        }
+    }
+
+    main, header, footer {
+        position: relative;
+        z-index: 1;
+    }
+    </style>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const symbols = ["🎵", "🎶", "♩", "♪"];
+        const container = document.createElement("div");
+        container.classList.add("music-bg");
+        document.body.appendChild(container);
+
+        // Crear 20 notas flotantes
+        for (let i = 0; i < 20; i++) {
+            const note = document.createElement("div");
+            note.classList.add("note");
+            note.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+            note.style.top = Math.random() * 100 + "%";
+            note.style.left = Math.random() * 100 + "%";
+            note.dataset.speed = (Math.random() * 0.5 + 0.2).toFixed(2); // Velocidad parallax
+            note.dataset.angle = Math.random() * 360; // Ángulo inicial
+            container.appendChild(note);
+        }
+
+        // Movimiento automático
+        function animateNotes() {
+            document.querySelectorAll(".note").forEach((note, index) => {
+                const angle = parseFloat(note.dataset.angle);
+                const floatY = Math.sin(Date.now()/1000 + index) * 10;
+                const floatX = Math.cos(Date.now()/1500 + index) * 5;
+                note.style.transform = `translate(${floatX}px, ${floatY}px) rotate(${angle}deg)`;
+            });
+            requestAnimationFrame(animateNotes);
+        }
+        animateNotes();
+
+        // Parallax con scroll
+        window.addEventListener("scroll", () => {
+            const scrollTop = window.scrollY;
+            document.querySelectorAll(".note").forEach(note => {
+                const speed = parseFloat(note.dataset.speed);
+                const angle = parseFloat(note.dataset.angle);
+                const offsetY = scrollTop * speed;
+                const floatY = Math.sin(Date.now()/1000) * 10;
+                note.style.transform = `translateY(${offsetY + floatY}px) rotate(${angle}deg)`;
+            });
+        });
+    });
+    </script>
+    </head>
+    
 <body>
 
   <header>
