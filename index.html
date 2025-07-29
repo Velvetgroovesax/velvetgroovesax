@@ -3,59 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Velvet Groove – Live Music, Smooth Vibe</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <title>Velvet Groove - Saxofonista para eventos</title>
   <link rel="stylesheet" href="style.css">
-  <script src="https://kit.fontawesome.com/your-kit-id.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-
-  <header class="encabezado">
-    <img src="tu-logo.png" alt="Velvet Groove Logo" class="logo">
+  <header class="header">
     <h1>Velvet Groove</h1>
-    <p class="subtitulo">Live Music, Smooth Vibe</p>
+    <p class="subtitle">Live Music, Smooth Vibe</p>
   </header>
 
-  <section class="tarjeta">
-    <h2>¿Quién soy?</h2>
-    <p>
-      Velvet Groove es el nombre bajo el que actúo como saxofonista en directo para eventos especiales.
-      Con un estilo elegante y versátil, combino el soul, el jazz, el pop y la electrónica para crear
-      ambientes únicos. Mi objetivo es aportar un toque distintivo y emocionante a cada evento,
-      cuidando el detalle musical desde la cercanía y la profesionalidad.
-    </p>
-    <a href="mailto:velvet.groovesax@gmail.com" class="boton">
-      Contrátame para tu evento
-    </a>
-  </section>
+  <main>
+    <section class="section fade-in" id="quien-soy">
+      <h2>¿Quién soy?</h2>
+      <p>
+        Velvet Groove es el nombre bajo el que actúo como saxofonista en directo para eventos especiales.
+        Con un estilo elegante y versátil, combino el soul, el jazz, el pop y la electrónica para crear ambientes únicos.
+        Mi objetivo es aportar un toque distintivo y emocionante a cada evento, cuidando el detalle musical desde la cercanía y la profesionalidad.
+      </p>
+      <a href="mailto:velvet.groovesax@gmail.com" class="cta-button">Contrátame para tu evento</a>
+    </section>
 
-  <section class="tarjeta">
-    <h2>Repertorio</h2>
-    <ul>
-      <li>Georgia on My Mind – Ray Charles</li>
-      <li>Just the Two of Us – Bill Withers</li>
-      <li>Sunny – Bobby Hebb</li>
-      <li>Isn't She Lovely – Stevie Wonder</li>
-      <li>Autumn Leaves – Joseph Kosma</li>
-      <li>Havana – Camila Cabello</li>
-      <li>Fly me to the Moon</li>
-      <li>Flowers – Miley Cyrus</li>
-      <li>Smooth Operator – Sade</li>
-      <li>…</li>
-    </ul>
-  </section>
+    <section class="section fade-in" id="repertorio">
+      <h2>Repertorio</h2>
+      <ul>
+        <li>Georgia on My Mind – Ray Charles</li>
+        <li>Just the Two of Us – Bill Withers</li>
+        <li>Sunny – Bobby Hebb</li>
+        <li>Isn't She Lovely – Stevie Wonder</li>
+        <li>Autumn Leaves – Joseph Kosma</li>
+        <li>Havana – Camila Cabello</li>
+        <li>Fly Me to the Moon</li>
+        <li>Flowers – Miley Cyrus</li>
+        <li>Smooth Operator – Sade</li>
+        <li>…</li>
+      </ul>
+    </section>
+  </main>
 
-  <footer class="pie">
-    <p>
-      <i class="fab fa-instagram"></i> 
-      <a href="https://www.instagram.com/tuusuario" target="_blank">@tuusuario</a> |
-      <i class="fas fa-envelope"></i>
-      <a href="mailto:velvet.groovesax@gmail.com">velvet.groovesax@gmail.com</a>
-    </p>
+  <footer class="footer">
     <p>© 2025 Velvet Groove</p>
+    <p>
+      <a href="mailto:velvet.groovesax@gmail.com">📧 velvet.groovesax@gmail.com</a> | 
+      <a href="https://www.instagram.com/velvetgroovesax?igsh=eWd5ZnNpeXgwNmgz&utm_source=qr" target="_blank">📸 Instagram</a>
+    </p>
   </footer>
 
+  <script>
+    const sections = document.querySelectorAll('.fade-in');
+    const options = { threshold: 0.2 };
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, options);
+    sections.forEach(section => observer.observe(section));
+  </script>
 </body>
 </html>
