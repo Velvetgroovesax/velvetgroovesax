@@ -92,6 +92,29 @@
       margin-top: 0;
     }
 
+    /* Repertorio con iconos */
+    #musica ul {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 0.5rem 1rem;
+    }
+
+    #musica li {
+      position: relative;
+      padding-left: 1.8rem;
+    }
+
+    #musica li::before {
+      content: "♪";
+      position: absolute;
+      left: 0;
+      color: var(--texto-dorado);
+      font-size: 1.2rem;
+      line-height: 1;
+    }
+
     footer {
       background-color: var(--fondo-principal);
       color: var(--texto-dorado);
@@ -108,7 +131,7 @@
 
   <header>
     <h1>Velvet Groove</h1>
-    <p>Elegancia y groove para tus eventos</p>
+    <p>Live Music, Smooth Vibe</p>
   </header>
 
   <nav>
@@ -121,8 +144,10 @@
     <section id="sobre">
       <h2>¿Quién soy?</h2>
       <p>
-        Velvet Groove es el nombre bajo el que actúo como saxofonista en directo para eventos especiales. Con un estilo elegante y versátil, combino el soul, el jazz y el pop para crear ambientes únicos y memorables. Mi objetivo es aportar un toque distintivo y emocional a cada celebración, cuidando cada detalle musical desde la cercanía y la profesionalidad.
-      </p>
+Velvet Groove es el nombre bajo el que actúo como saxofonista en directo para eventos especiales. 
+Con un estilo elegante y versátil, combino el soul, el jazz, el pop y la electrónica para crear ambientes únicos. 
+Mi objetivo es aportar un toque distintivo y emocionante a cada evento, cuidando el detalle musical desde la cercanía y la profesionalidad.
+</p>
     </section>
 
     <section id="musica">
@@ -133,6 +158,11 @@
         <li>Sunny – Bobby Hebb</li>
         <li>Isn't She Lovely – Stevie Wonder</li>
         <li>Autumn Leaves – Joseph Kosma</li>
+        <li>Havana – Camila Cabello</li>
+        <li>Fly Me to the Moon – Frank Sinatra</li>
+        <li>Flowers – Miley Cyrus</li>
+        <li>Smooth Operator – Sade</li>
+        <li>...</li>
       </ul>
     </section>
 
