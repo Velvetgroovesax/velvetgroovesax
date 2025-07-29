@@ -1,133 +1,61 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Velvet Groove - Live Music, Smooth Vibe</title>
-    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Poppins', sans-serif;
-            background: #4B0F1F;
-            color: #f1e8d6;
-            overflow-x: hidden;
-        }
-        header {
-            background: linear-gradient(135deg, #4B0F1F 0%, #3C0D16 100%);
-            color: #d4af37;
-            text-align: center;
-            padding: 120px 20px;
-            position: relative;
-        }
-        header h1 {
-            font-family: 'Allura', cursive;
-            font-size: 4em;
-            margin: 0;
-            animation: fadeInDown 1.5s ease;
-        }
-        header h2 {
-            font-size: 1.5em;
-            font-weight: 300;
-            margin-top: 10px;
-            animation: fadeInUp 1.5s ease;
-        }
-        @keyframes fadeInDown {
-            from {opacity: 0; transform: translateY(-50px);}
-            to {opacity: 1; transform: translateY(0);}
-        }
-        @keyframes fadeInUp {
-            from {opacity: 0; transform: translateY(50px);}
-            to {opacity: 1; transform: translateY(0);}
-        }
-
-        section {
-            max-width: 900px;
-            margin: 80px auto;
-            padding: 20px;
-            background: rgba(255,255,255,0.03);
-            border-radius: 12px;
-            text-align: center;
-            line-height: 1.8;
-        }
-        section h3 {
-            font-size: 2em;
-            color: #d4af37;
-            margin-bottom: 20px;
-        }
-
-        .cta {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 12px 30px;
-            background-color: #d4af37;
-            color: #4B0F1F;
-            text-decoration: none;
-            border-radius: 30px;
-            font-weight: 600;
-            transition: 0.3s;
-        }
-        .cta:hover {
-            background-color: #b38f2d;
-            transform: translateY(-3px);
-        }
-
-        footer {
-            background: linear-gradient(135deg, #4B0F1F 0%, #3C0D16 100%);
-            color: #d4af37;
-            text-align: center;
-            padding: 40px 20px;
-        }
-        footer p {
-            margin: 5px 0;
-        }
-        footer a {
-            color: #d4af37;
-            text-decoration: none;
-            transition: 0.3s;
-        }
-        footer a:hover {
-            color: #f5d76e;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Velvet Groove – Live Music, Smooth Vibe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/your-kit-id.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-<header>
+  <header class="encabezado">
+    <img src="tu-logo.png" alt="Velvet Groove Logo" class="logo">
     <h1>Velvet Groove</h1>
-    <h2>Live Music, Smooth Vibe</h2>
-</header>
+    <p class="subtitulo">Live Music, Smooth Vibe</p>
+  </header>
 
-<main>
-    <section>
-        <h3>¿Quién soy?</h3>
-        <p>Velvet Groove es el nombre bajo el que actúo como saxofonista en directo para eventos especiales. 
-        Con un estilo elegante y versátil, combino el soul, el jazz, el pop y la electrónica para crear ambientes únicos. 
-        Mi objetivo es aportar un toque distintivo y emocionante a cada evento, cuidando el detalle musical desde la cercanía y la profesionalidad.</p>
-        <a href="mailto:velvet.groovesax@gmail.com" class="cta">Contrátame para tu evento</a>
-    </section>
+  <section class="tarjeta">
+    <h2>¿Quién soy?</h2>
+    <p>
+      Velvet Groove es el nombre bajo el que actúo como saxofonista en directo para eventos especiales.
+      Con un estilo elegante y versátil, combino el soul, el jazz, el pop y la electrónica para crear
+      ambientes únicos. Mi objetivo es aportar un toque distintivo y emocionante a cada evento,
+      cuidando el detalle musical desde la cercanía y la profesionalidad.
+    </p>
+    <a href="mailto:velvet.groovesax@gmail.com" class="boton">
+      Contrátame para tu evento
+    </a>
+  </section>
 
-    <section>
-        <h3>Repertorio</h3>
-        <p>• Georgia on My Mind – Ray Charles<br>
-        • Just the Two of Us – Bill Withers<br>
-        • Sunny – Bobby Hebb<br>
-        • Isn't She Lovely – Stevie Wonder<br>
-        • Autumn Leaves – Joseph Kosma<br>
-        • Havana – Camila Cabello<br>
-        • Fly me to the Moon<br>
-        • Flowers – Miley Cyrus<br>
-        • Smooth Operator – Sade<br>
-        • ...</p>
-    </section>
-</main>
+  <section class="tarjeta">
+    <h2>Repertorio</h2>
+    <ul>
+      <li>Georgia on My Mind – Ray Charles</li>
+      <li>Just the Two of Us – Bill Withers</li>
+      <li>Sunny – Bobby Hebb</li>
+      <li>Isn't She Lovely – Stevie Wonder</li>
+      <li>Autumn Leaves – Joseph Kosma</li>
+      <li>Havana – Camila Cabello</li>
+      <li>Fly me to the Moon</li>
+      <li>Flowers – Miley Cyrus</li>
+      <li>Smooth Operator – Sade</li>
+      <li>…</li>
+    </ul>
+  </section>
 
-<footer>
-    <p>Contacto: <a href="mailto:velvet.groovesax@gmail.com">velvet.groovesax@gmail.com</a></p>
-    <p><a href="https://www.instagram.com/velvetgroovesax?igsh=eWd5ZnNpeXgwNmgz&utm_source=qr" target="_blank">Instagram</a></p>
+  <footer class="pie">
+    <p>
+      <i class="fab fa-instagram"></i> 
+      <a href="https://www.instagram.com/tuusuario" target="_blank">@tuusuario</a> |
+      <i class="fas fa-envelope"></i>
+      <a href="mailto:velvet.groovesax@gmail.com">velvet.groovesax@gmail.com</a>
+    </p>
     <p>© 2025 Velvet Groove</p>
-</footer>
+  </footer>
 
 </body>
 </html>
