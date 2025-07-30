@@ -1,66 +1,59 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Velvet Groove - Saxofonista para eventos</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Allura&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velvet Groove</title>
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="header">
+
+<header>
     <h1>Velvet Groove</h1>
-    <p class="subtitle">Live Music, Smooth Vibe</p>
-  </header>
+    <h2>Live Music, Smooth Vibe</h2>
+</header>
 
-  <main>
-    <section class="section fade-in" id="quien-soy">
-      <h2>¿Quién soy?</h2>
-      <p>
-        Velvet Groove es el nombre bajo el que actúo como saxofonista en directo para eventos especiales.
-        Con un estilo elegante y versátil, combino el soul, el jazz, el pop y la electrónica para crear ambientes únicos.
-        Mi objetivo es aportar un toque distintivo y emocionante a cada evento, cuidando el detalle musical desde la cercanía y la profesionalidad.
-      </p>
-      <a href="mailto:velvet.groovesax@gmail.com" class="cta-button">Contrátame para tu evento</a>
-    </section>
+<section>
+    <h2>¿Quién soy?</h2>
+    <p style="text-align:center;">
+        Velvet Groove es el nombre bajo el que actúo como saxofonista en directo para eventos especiales. 
+        Con un estilo elegante y versátil, combino el soul, el jazz, el pop y la electrónica 
+        para crear ambientes únicos. Mi objetivo es aportar un toque distintivo y emocionante 
+        a cada evento, cuidando el detalle musical desde la cercanía y la profesionalidad.
+    </p>
+</section>
 
-    <section class="section fade-in" id="repertorio">
-      <h2>Repertorio</h2>
-      <ul>
+<section>
+    <h2>Repertorio</h2>
+    <ul>
         <li>Georgia on My Mind – Ray Charles</li>
         <li>Just the Two of Us – Bill Withers</li>
         <li>Sunny – Bobby Hebb</li>
         <li>Isn't She Lovely – Stevie Wonder</li>
         <li>Autumn Leaves – Joseph Kosma</li>
         <li>Havana – Camila Cabello</li>
-        <li>Fly Me to the Moon</li>
+        <li>Fly me to the Moon</li>
         <li>Flowers – Miley Cyrus</li>
         <li>Smooth Operator – Sade</li>
         <li>…</li>
-      </ul>
-    </section>
-  </main>
+    </ul>
+</section>
 
-  <footer class="footer">
-    <p>© 2025 Velvet Groove</p>
-    <p>
-      <a href="mailto:velvet.groovesax@gmail.com">📧 velvet.groovesax@gmail.com</a> | 
-      <a href="https://www.instagram.com/velvetgroovesax?igsh=eWd5ZnNpeXgwNmgz&utm_source=qr" target="_blank">📸 Instagram</a>
-    </p>
-  </footer>
+<section>
+    <h2>Mis redes sociales</h2>
+    <div class="social-links">
+        <a href="mailto:velvet.groovesax@gmail.com"><i class="fa-solid fa-envelope"></i> velvet.groovesax@gmail.com</a>
+        <a href="https://www.instagram.com/velvetgroovesax?igsh=eWd5ZnNpeXgwNmgz&utm_source=qr" target="_blank">
+            <i class="fa-brands fa-instagram"></i> @velvetgroovesax
+        </a>
+    </div>
+</section>
 
-  <script>
-    const sections = document.querySelectorAll('.fade-in');
-    const options = { threshold: 0.2 };
-    const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting){
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, options);
-    sections.forEach(section => observer.observe(section));
-  </script>
+<footer>
+    © 2025 Velvet Groove
+</footer>
+
 </body>
 </html>
