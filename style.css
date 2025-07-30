@@ -33,7 +33,7 @@ body {
 
 .header h1 {
   margin: 0;
-  font-size: 3rem;
+  font-size: 4rem;
   color: #c19a3f;
   font-family: 'Allura', cursive;
 }
@@ -112,7 +112,7 @@ body {
 }
 
 @media (max-width: 600px) {
-  .header h1 { font-size: 2.5rem; }
+  .header h1 { font-size: 4rem; }
   .subtitle { font-size: 1rem; }
   .section { padding: 30px 15px; }
 }
